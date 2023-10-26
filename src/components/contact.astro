@@ -1,0 +1,38 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import { Image } from '@astrojs/image/components';
+import facebookIcon from '~/assets/facebook-icon.png'
+import instagramIcon from '~/assets/instagram-icon.png'
+import twitterIcon from '~/assets/twitter-icon.png'
+
+
+const items = [
+  {
+    image: facebookIcon,
+    alt: 'facebook icon',
+    link: 'https://www.facebook.com/misaelproject'
+  },
+  {
+    image: instagramIcon,
+    alt: 'instagram icon',
+    link: 'https://www.instagram.com/misaelproject/'
+  },
+  // {
+  //   image: twitterIcon,
+  //   alt: 'twitter icon',
+  //   link: 'https://www.twitter.com'
+  // },
+]
+---
+
+<ContentSection title="CONTACT" id="contacts">
+  <Fragment slot="lead">
+    Email us at <span class="highlight-text"><a href="mailto:info@misalproject.com" target="_blank">info@misalproject.com</a></span>
+    <br>
+    <div class="flex flex-row items-center gap-6" >
+      {
+        items.map(item => <a href={item.link} target="_blank"><Image src={item.image} alt={item.alt} width={50} height={50}/></a>)
+      }
+    </div>
+  </Fragment>
+</ContentSection>

@@ -1,0 +1,16 @@
+---
+import misaelLogoWithText from "~/assets/misaelLogoWithText.png"
+
+const { img, title } = Astro.props;
+---
+
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
+  <a href="#">
+      <img class="rounded-t-lg" src={img} alt="" />
+  </a>
+  <div class="p-5">
+      <a href="#">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-red-900">{title}</h5>
+      </a>
+  </div>
+</div>

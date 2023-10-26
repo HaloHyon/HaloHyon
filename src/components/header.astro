@@ -1,0 +1,101 @@
+---
+import { Icon } from "astro-icon";
+import { Image } from '@astrojs/image/components';
+import  HALOHYONC from "~/assets/HALOHYONC.png"
+import misaelLogoWithText from "~/assets/misaelLogoWithText.png"
+import type { NavItem } from "~/types";
+
+
+const navItems: Array<NavItem> = [
+  { title: "Beranda", url: "#" },
+  { title: "Testimoni", url: "/testimoni" },
+  { title: "Foto", url: "/foto" },
+  // { title: "Affiliates", url: "#affiliates" },
+  { title: "Video", url: "/video" },
+];
+---
+
+<header
+  id="page-header"
+  class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b px-8 py-0 fixed-header"
+>
+  <a class="flex items-center hover:!text-default py-1" href="#">
+    <Image src={HALOHYONC} alt={"Logo Misael Project"} height={50}; />
+  </a>
+  <div>
+    <div class="flex items-center gap-6">
+      <nav class="hidden sm:block">
+        <ul class="flex items-center gap-6">
+          {
+            navItems.map(({ title, url }) => (
+              <li>
+                <a class="text-sm" href={url}>
+                  {title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <button
+        id="open-nav-button"
+        type="button"
+        class="btn sm:hidden"
+        aria-label="Navigation"
+      >
+        <Icon pack="mdi" name="menu" class="h-8" />
+      </button>
+    </div>
+    <div id="menu-modal" class="modal hidden" aria-hidden="true">
+      <div class="fixed inset-0 bg-default px-8 py-4 text-default">
+        <div class="space-y-4" role="dialog" aria-modal="true">
+          <header class="text-right">
+            <button
+              id="close-nav-button"
+              type="button"
+              class="btn"
+              aria-label="Close navigation"
+            >
+              <Icon pack="mdi" name="close" class="h-8" />
+            </button>
+          </header>
+          <div class="flex justify-center">
+            <Image src={misaelLogoWithText} alt={"Logo Misael Project With Text"} height={150} width={150}/>
+          </div>
+          <nav>
+            <ul class="flex flex-col">
+              {
+                navItems.map(({ title, url }) => (
+                  <li>
+                    <a class="block py-4 text-center text-xl" href={url}>
+                      {title}
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<noscript>
+  <style>
+    #open-nav-button {
+      display: none;
+    }
+  </style>
+</noscript>
+
+<style>
+  .fixed-header {
+    background-color:#ffffff;
+    @apply fixed top-0 bottom-auto;
+    @apply border-default;
+  }
+  .modal.is-open {
+    @apply block;
+  }
+</style>
