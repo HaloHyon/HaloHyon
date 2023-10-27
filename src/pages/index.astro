@@ -1,21 +1,18 @@
 ---
 import "@fontsource/inter/variable.css";
-import Messsages from "~/components/messages.astro";
 import Illusts from "~/components/illusts.astro";
 import About from "~/components/about.astro";
 import Articles from "~/components/articles.astro";
-import Footer from "~/components/footer.astro";
+import Videos from "~/components/videos.astro";
 import Header from "~/components/header.astro";
-import Intro from "~/components/intro.astro";
-import Affiliates from "~/components/affiliates.astro";
-import Contact from "~/components/contact.astro";
 import "~/styles/index.css";
 import Messages from "~/components/messages.astro";
+import halohyonlc from "~/assets/HALOHYONLC.png"
 
 const { generator, site } = Astro;
 const image = new URL("misaelLogoWithText.png", site);
 const description =
-  "Misael Project; one-stop solution to support local creations and community development";
+  "Halohyon";
 ---
 
 <!DOCTYPE html>
@@ -23,10 +20,10 @@ const description =
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/misaelLogo.png" type="image/png" />
+    <link rel="icon" href={halohyonlc.src} type="image/png" />
     <meta name="generator" content={generator} />
 
-    <title>Misael Project</title>
+    <title>HaloHyon</title>
     <meta name="description" content={description} />
 
     <!-- social media -->
@@ -71,31 +68,9 @@ const description =
       <Messages />
       <Illusts />
       <Articles />
+      <Videos />
     </div>
-    <Footer />
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-analytics.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-    
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyAZ_BL8Nf2KGephRdk5Ll7Pi3uC1qxJZXY",
-        authDomain: "misael-project.firebaseapp.com",
-        projectId: "misael-project",
-        storageBucket: "misael-project.appspot.com",
-        messagingSenderId: "197841362101",
-        appId: "1:197841362101:web:bf381000c962b2960af2fc",
-        measurementId: "G-6KEMLSRQEV"
-      };
-    
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-    </script>
+    <!-- <Footer /> -->
   </body>
 </html>
 
