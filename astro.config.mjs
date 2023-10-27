@@ -19,5 +19,3 @@ export default defineConfig({
     }
   }
 });
-
-import { defineConfig } from 'astro/config'
