@@ -2,6 +2,13 @@
 import {
   BackgroundImage,
 } from "astro-imagetools/components";
+import hyonaHappy from "~/assets/website-assets/HyonHappy.png"
+import pawtient1 from "~/assets/website-assets/pawtient-1.png"
+import pawtient2 from "~/assets/website-assets/pawtient-2.png"
+import pawtient3 from "~/assets/website-assets/pawtient-3.png"
+import hyonaChainsaw from "~/assets/website-assets/hyona-chainsaw.png"
+import hyonaTable from "~/assets/website-assets/hyona-table.png"
+
 
 import IconCards from "./icon-cards.astro";
 ---
@@ -14,32 +21,28 @@ import IconCards from "./icon-cards.astro";
     <BackgroundImage
       src="src/assets/abstraction3.png"
     >
-      <nav class="scroll-mt-24 flex-row items-center gap-4 py-8 px-6 sm:flex hidden">
+      <nav class="scroll-mt-24 flex-row items-center gap-4 px-6 sm:flex hidden">
         <div> 
           <p
-            class="font-extrabold px-6 tracking-tight text-6xl highlight-title"
+            class="px-6 tracking-tight text-6xl highlight-title"
           >
             Solusi Halu Terlengkap
           </p>
           <p
-            class="font-extrabold px-6 tracking-tight text-m highlight-title"
+            class="px-6 tracking-tight text-m highlight-title"
           >
-            Zatsudan, story based game, consensual kidnapping, roleplay, art streams,
-            Semua ada di HaloHyon!
+          Chat with Panther doc, visit the clinic, recap lab check, read newest article, buy hyonamin, everything can be done at HaloHyon !
           </p>
           <div class="scroll-mt-24 flex-row items-center gap-4 py-8 px-6 sm:flex hidden">
-            <IconCards title="Fanarts" class="flex"/>
-            <IconCards title="Clips" class="flex"/>
-            <IconCards title="Fics" class="flex"/>
-            <IconCards title="Etc" class="flex"/>
+            <IconCards img={pawtient1.src} title="Message" class="flex"/>
+            <IconCards img={hyonaTable.src} title="Illustration" class="flex"/>
+            <IconCards img={pawtient2.src} title="Story article" class="flex"/>
+            <IconCards img={hyonaChainsaw.src} title="Clinix decoration" class="flex"/>
+            <IconCards img={pawtient3.src} title="Clips" class="flex"/>
           </div>
         </div>
         <div class="flex flex-col basis-1/3 items-center gap-4">
-          <p
-            class="text-center font-extrabold tracking-tight text-6xl highlight-title"
-          >
-            IMAGE PLACEHOLDER
-          </p>
+          <img class="rounded-t-lg" src={hyonaHappy.src} alt="" />
         </div>
       </nav>
     </BackgroundImage>

@@ -1,13 +1,16 @@
 ---
 import "@fontsource/inter/variable.css";
-import Events from "~/components/events.astro";
+import Messsages from "~/components/messages.astro";
+import Illusts from "~/components/illusts.astro";
 import About from "~/components/about.astro";
+import Articles from "~/components/articles.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
 import Affiliates from "~/components/affiliates.astro";
 import Contact from "~/components/contact.astro";
 import "~/styles/index.css";
+import Messages from "~/components/messages.astro";
 
 const { generator, site } = Astro;
 const image = new URL("misaelLogoWithText.png", site);
@@ -65,9 +68,9 @@ const description =
     <div>
       <!-- <Intro /> -->
       <About />
-      <Events />
-      <!-- <Affiliates /> -->
-      <Contact />
+      <Messages />
+      <Illusts />
+      <Articles />
     </div>
     <Footer />
     <script type="module">

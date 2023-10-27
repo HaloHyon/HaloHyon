@@ -19,10 +19,10 @@ html {
 }
 
 .highlight-text{
-  color: #ed9189;
+  color: #7C041C;
 }
 .highlight-title{
-  color: #ed9189;
+  color: #7C041C;
   /* text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000; */
 }
 
@@ -68,24 +68,32 @@ hr {
   background-position: center;
 }
 
-.mySwiper2 {
-  height: 80%;
-  width: 100%;
-}
-
 .mySwiper {
-  height: 20%;
+  height: 80%;
   box-sizing: border-box;
   padding: 10px 0;
 }
 
 .mySwiper .swiper-slide {
-  width: 25%;
-  height: 100%;
+  width: 700px;
+  height: 700px;
+  align-items: center;
+  background-color: transparent;
+  color: transparent;
+}
+
+.articleswiper .swiper-slide {
+  height: 1000px;
+  align-items: center;
+  background-color: transparent;
+  color: transparent;
+}
+
+.swiper-slide{
   opacity: 0.4;
 }
 
-.mySwiper .swiper-slide-thumb-active {
+.swiper-slide-active{
   opacity: 1;
 }
 

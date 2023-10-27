@@ -1,0 +1,52 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import Carousel from "./Carousel";
+import img1 from '~/assets/website-assets/msg-board/1.png'
+import img2 from '~/assets/website-assets/msg-board/2.png'
+import img3 from '~/assets/website-assets/msg-board/3.png'
+import img4 from '~/assets/website-assets/msg-board/4.png'
+import img5 from '~/assets/website-assets/msg-board/5.png'
+import img6 from '~/assets/website-assets/msg-board/6.png'
+import img7 from '~/assets/website-assets/msg-board/7.png'
+import img8 from '~/assets/website-assets/msg-board/8.png'
+
+const items = [
+  {
+    poster: img1.src,
+    posterAlt: "",
+  },
+  {
+    poster: img2.src,
+    posterAlt: "",
+  },
+  {
+    poster: img3.src,
+    posterAlt: "",
+  },
+  {
+    poster: img4.src,
+    posterAlt: "",
+  },
+  {
+    poster: img5.src,
+    posterAlt: "",
+  },
+  {
+    poster: img6.src,
+    posterAlt: "",
+  },
+  {
+    poster: img7.src,
+    posterAlt: "",
+  },
+  {
+    poster: img8.src,
+    posterAlt: "",
+  },
+] 
+---
+<div class="items-center">
+  <ContentSection title="Have a vitamin D's deficiency or need certain nuts allergy information? Just chat directly with general practitioners and specialists at HaloHyon, anytime, anywhere." id="messages">
+  </ContentSection>
+  <Carousel items={items} client:load />
+</div>

@@ -1,0 +1,72 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import Carousel from "./Carousel";
+import img1 from '~/assets/illustrations/1.png'
+import img2 from '~/assets/illustrations/2.png'
+import img3 from '~/assets/illustrations/3.png'
+import img4 from '~/assets/illustrations/4.png'
+import img5 from '~/assets/illustrations/5.png'
+import img6 from '~/assets/illustrations/6.png'
+import img7 from '~/assets/illustrations/7.png'
+import img8 from '~/assets/illustrations/8.png'
+import img9 from '~/assets/illustrations/9.png'
+import img10 from '~/assets/illustrations/10.png'
+import img11 from '~/assets/illustrations/11.png'
+import img12 from '~/assets/illustrations/12.png'
+
+const items = [
+  {
+    poster: img1.src,
+    posterAlt: "",
+  },
+  {
+    poster: img2.src,
+    posterAlt: "",
+  },
+  {
+    poster: img3.src,
+    posterAlt: "",
+  },
+  {
+    poster: img4.src,
+    posterAlt: "",
+  },
+  {
+    poster: img5.src,
+    posterAlt: "",
+  },
+  {
+    poster: img6.src,
+    posterAlt: "",
+  },
+  {
+    poster: img7.src,
+    posterAlt: "",
+  },
+  {
+    poster: img8.src,
+    posterAlt: "",
+  },
+  {
+    poster: img9.src,
+    posterAlt: "",
+  },
+  {
+    poster: img10.src,
+    posterAlt: "",
+  },
+  {
+    poster: img11.src,
+    posterAlt: "",
+  },
+  {
+    poster: img12.src,
+    posterAlt: "",
+  },
+] 
+---
+<div class="items-center">
+  <ContentSection title="Recap Lab check is an examination to determine various Hyon types. Learn about the types of stream and their adventure in full in this article!" id="illusts">
+  </ContentSection>
+  <Carousel items={items} client:load />
+</div>

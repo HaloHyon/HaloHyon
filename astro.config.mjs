@@ -8,7 +8,8 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-moon-landing.netlify.app/",
+  site: "https://HaloHyon.github.io",
+  base: '/HaloHyon',
   integrations: [tailwind(), image({
     serviceEntryPoint: "@astrojs/image/sharp"
   }), astroImageTools, react()],
@@ -18,3 +19,5 @@ export default defineConfig({
     }
   }
 });
+
+import { defineConfig } from 'astro/config'
