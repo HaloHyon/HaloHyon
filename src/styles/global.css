@@ -75,8 +75,8 @@ hr {
 }
 
 .mySwiper .swiper-slide {
-  width: 700px;
-  height: 700px;
+  height: 600px;
+  width: auto;
   align-items: center;
   background-color: transparent;
   color: transparent;
