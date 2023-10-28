@@ -12,7 +12,7 @@ import "swiper/css/thumbs";
 // import required modules
 import { EffectCoverflow, Pagination, Navigation } from "swiper";
 
-export default function Carousel({items}) {
+export default function Carousel({items, isLooped=true}) {
 
   return (
     <div className="px-8 items-center ">
@@ -28,6 +28,7 @@ export default function Carousel({items}) {
           modifier: 1,
           slideShadows: true,
         }}
+        loop={isLooped}
         pagination={true}
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="mySwiper"

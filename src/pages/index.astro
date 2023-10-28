@@ -5,6 +5,7 @@ import About from "~/components/about.astro";
 import Articles from "~/components/articles.astro";
 import Videos from "~/components/videos.astro";
 import Header from "~/components/header.astro";
+import Clinic from "~/components/clinix.astro";
 import "~/styles/index.css";
 import Messages from "~/components/messages.astro";
 import halohyonlc from "~/assets/HALOHYONLC.png"
@@ -27,7 +28,7 @@ const description =
     <meta name="description" content={description} />
 
     <!-- social media -->
-    <meta property="og:title" content="Misael Project" />
+    <meta property="og:title" content="HaloHyon" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={image} />
@@ -68,6 +69,7 @@ const description =
       <Messages />
       <Illusts />
       <Articles />
+      <Clinic />
       <Videos />
     </div>
     <!-- <Footer /> -->

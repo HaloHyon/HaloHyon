@@ -6,11 +6,13 @@ import type { NavItem } from "~/types";
 
 
 const navItems: Array<NavItem> = [
-  { title: "Beranda", url: "#" },
-  { title: "Testimoni", url: "/testimoni" },
-  { title: "Foto", url: "/foto" },
+  { title: "Home", url: "#" },
+  { title: "Message", url: "#message" },
+  { title: "Illusts", url: "#illust" },
+  { title: "Stories", url: "#articles" },
+  { title: "Clinix", url: "#clinic" },
   // { title: "Affiliates", url: "#affiliates" },
-  { title: "Video", url: "/video" },
+  { title: "Video", url: "#videos" },
 ];
 ---
 
@@ -18,7 +20,7 @@ const navItems: Array<NavItem> = [
   id="page-header"
   class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b px-8 py-0 fixed-header"
 >
-  <a class="flex items-center hover:!text-default py-1" href="#">
+  <a class="flex items-center py-1" href="#">
     <Image src={HALOHYONC} alt={"halohyon"} height={50}; />
   </a>
   <div>

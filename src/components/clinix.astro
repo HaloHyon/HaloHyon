@@ -1,0 +1,35 @@
+---
+import ContentSection from "~/components/content-section.astro";
+import Carousel from "./Carousel";
+import img1 from '~/assets/clinic/1.png'
+import img2 from '~/assets/clinic/2.png'
+import img3 from '~/assets/clinic/3.png'
+import img4 from '~/assets/clinic/4.png'
+
+const items = [
+  {
+    poster: img1.src,
+    posterAlt: "",
+  },
+  {
+    poster: img2.src,
+    posterAlt: "",
+  },
+  {
+    poster: img3.src,
+    posterAlt: "",
+  },
+  {
+    poster: img4.src,
+    posterAlt: "",
+  },
+] 
+---
+<div class="items-center">
+  <ContentSection title="Book Your Appointment. Open 24/7. Please head into the clinic registration and we will respond asap." id="clinic">
+  </ContentSection>
+  <Carousel items={items} client:load />
+  <br>
+  <br>
+  <br>
+</div>
